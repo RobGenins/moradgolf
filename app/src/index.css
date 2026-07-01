@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 50% 8%;
+    --foreground: 0 0% 98%;
+    --card: 215 45% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 45% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 35% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 35% 15%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 215 35% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 160 84% 39%;
+    --radius: 0.625rem;
+    --sidebar-background: 215 50% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 35% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 30% 18%;
+    --sidebar-ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#0a1628] text-foreground antialiased;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a4a73;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: white;
+}
+
+/* Simple fade-in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDelay1 { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDelay2 { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDelay3 { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-1 {
+  opacity: 0;
+  animation: fadeInDelay1 0.6s ease-out 0.1s forwards;
+}
+
+.animate-fade-in-2 {
+  opacity: 0;
+  animation: fadeInDelay2 0.6s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-3 {
+  opacity: 0;
+  animation: fadeInDelay3 0.6s ease-out 0.3s forwards;
+}
